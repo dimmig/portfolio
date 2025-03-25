@@ -29,9 +29,9 @@ const experiences = [
 
 const education = [
   {
-    year: "2015 - 2019",
+    year: "2023 - 2027",
     title: "Bachelor of Computer Science",
-    institution: "University Name",
+    institution: "University Of Silesia, Katowice",
     description: "Graduated with honors. Focused on software engineering and web development.",
   },
 ];
