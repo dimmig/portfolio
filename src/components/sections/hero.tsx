@@ -47,9 +47,9 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob dark:bg-blue-900" />
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 dark:bg-purple-900" />
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 dark:bg-pink-900" />
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 dark:opacity-50 animate-blob" />
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 dark:opacity-50 animate-blob animation-delay-2000" />
+        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-to-r from-violet-600 via-purple-500 to-pink-500 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-70 dark:opacity-50 animate-blob animation-delay-4000" />
       </motion.div>
 
       {/* Content */}
@@ -86,7 +86,7 @@ export function Hero() {
               href="#contact"
               className="group relative px-6 py-3 border border-gray-300 dark:border-gray-600 rounded-full overflow-hidden transition-all duration-300 hover:scale-105"
             >
-              <span className="relative z-10">Contact Me</span>
+              <span className="relative z-10 text-gray-900 dark:text-white">Contact Me</span>
               <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </motion.div>
@@ -99,24 +99,9 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative h-[300px] sm:h-[400px] w-full order-first lg:order-last mb-8 lg:mb-0"
         >
-          <Scene3D />
+          {/* <Scene3D /> */}
         </motion.div>
       </div>
-
-      {/* Theme toggle with 3D effect */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="absolute top-4 right-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300 transform hover:scale-110 hover:rotate-12 z-20"
-      >
-        {theme === "dark" ? (
-          <SunIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-200" />
-        ) : (
-          <MoonIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
-        )}
-      </motion.button>
 
       {/* Scroll indicator */}
       <motion.div
