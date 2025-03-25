@@ -5,6 +5,8 @@ import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { useEffect, useRef } from "react";
 import { Scene3D } from "../3d/Scene3D";
+import { WaveScene3D } from "../WaveScene3D";
+import { HeroScene3D } from "../HeroScene3D";
 
 export function Hero() {
   const { theme, setTheme } = useTheme();
@@ -90,17 +92,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </motion.div>
-        </motion.div>
-
-        {/* 3D Scene */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative h-[300px] sm:h-[400px] w-full order-first lg:order-last mb-8 lg:mb-0"
-        >
-          {/* <Scene3D /> */}
-        </motion.div>
+        </motion.div>        
       </div>
 
       {/* Scroll indicator */}
