@@ -34,19 +34,22 @@ export function Projects() {
         const { data } = await octokit.repos.listForUser({
           username: "dimmig",
           sort: "updated",
-          per_page: 6,
+          per_page: 7,
         });
-        setRepos(data.map(repo => ({
-          name: repo.name,
-          description: repo.description,
-          html_url: repo.html_url,
-          stargazers_count: repo.stargazers_count || 0,
-          language: repo.language || null,
-          topics: repo.topics || [],
-          homepage: repo.homepage || null,
-          created_at: repo.created_at || new Date().toISOString(),
-          updated_at: repo.updated_at || new Date().toISOString(),
-        })));
+        setRepos(data
+          .filter(repo => repo.name.toLowerCase() !== 'portfolio')
+          .slice(0, 6)
+          .map(repo => ({
+            name: repo.name,
+            description: repo.description,
+            html_url: repo.html_url,
+            stargazers_count: repo.stargazers_count || 0,
+            language: repo.language || null,
+            topics: repo.topics || [],
+            homepage: repo.homepage || null,
+            created_at: repo.created_at || new Date().toISOString(),
+            updated_at: repo.updated_at || new Date().toISOString(),
+          })));
       } catch (error) {
         console.error("Error fetching repositories:", error);
       } finally {
