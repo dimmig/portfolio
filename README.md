@@ -1,6 +1,5 @@
 # Modern Portfolio Website
 
-
 A modern, visually stunning portfolio website built with Next.js, featuring smooth animations, dark/light mode, and automatic GitHub integration.
 
 ## Features
