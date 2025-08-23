@@ -22,19 +22,19 @@ const experiences = [
     color: "bg-gradient-to-r from-blue-500 to-cyan-500"
   },
   {
-    year: "2022 - 2023",
-    title: "NexaFlow",
-    role: "Full Stack Developer",
-    company: "Tech Company",
-    location: "Hybrid",
-    description: "Developed and maintained multiple full-stack applications. Implemented CI/CD pipelines and automated testing.",
+    year: "2023 - 2024",
+    title: "Alura",
+    role: "Founder",
+    company: "Independent",
+    location: "Remote",
+    description: "Designed and developed an online language learning platform with a responsive and user-friendly interface.",
     achievements: [
-      "Built 3 major features",
-      "Reduced loading time by 50%",
-      "Implemented automated testing",
-      "Mentored 2 junior developers"
+      "Launched platform to over 1,000 active users in first 3 months",
+      "Improved backend efficiency by 30% through optimized queries",
+      "Increased scalability with containerized microservices",
+      "Delivered multilingual UI for global users"
     ],
-    technologies: ["Next.js", "Python", "Django", "PostgreSQL"],
+    technologies: ["React.js", "Golang", "Docker", "Kubernetes", "PostgreSQL"],
     color: "bg-gradient-to-r from-purple-500 to-pink-500"
   },
   {
