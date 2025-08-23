@@ -19,6 +19,7 @@ A modern, visually stunning portfolio website built with Next.js, featuring smoo
 - Tailwind CSS
 - Framer Motion
 - React Icons
+- SOLID   
 - Octokit (GitHub API)
 
 ## Getting Started
