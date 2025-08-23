@@ -8,7 +8,7 @@ const experiences = [
   {
     year: "2024 - Present",
     title: "AirTrail",
-    role: "Senior Software Developer",
+    role: "Middle Software Developer",
     company: "Tech Company",
     location: "Remote",
     description: "Leading development of scalable web applications using modern technologies. Mentoring junior developers and implementing best practices.",
