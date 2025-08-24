@@ -18,7 +18,7 @@ const experiences = [
     title: "Middle Software Developer",
     company: "Airtrail Company",
     period: "2024 - Present",
-    description: "Development of enterprise aviation application.",
+    description: "Development of enterprise aviation software.",
   },
   {
     title: "Full Stack Developer",

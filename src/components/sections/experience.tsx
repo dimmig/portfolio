@@ -11,12 +11,12 @@ const experiences = [
     role: "Middle Software Developer",
     company: "Tech Company",
     location: "Remote",
-    description: "Leading development of scalable web applications using modern technologies. Mentoring junior developers and implementing best practices.",
+    description: "Developing and maintaining scalable web applications with focus on code quality and user experience. Collaborating with cross-functional teams on feature development.",
     achievements: [
-      "Improved application performance by 40%",
-      "Led team of 5 developers",
-      "Implemented CI/CD pipelines",
-      "Reduced bug reports by 60%"
+      "Optimized application performance by 30%",
+      "Implemented responsive UI components",
+      "Collaborated on API design and integration",
+      "Contributed to code reviews and best practices"
     ],
     technologies: ["React", "TypeScript", "Node.js", "AWS"],
     color: "bg-gradient-to-r from-blue-500 to-cyan-500"
