@@ -310,7 +310,7 @@ export function Experience() {
                   <div className={`absolute top-0 left-0 w-2 h-full ${edu.color} rounded-l-xl`} />
                   <div className="pl-4">
                     <div className={`inline-block px-4 py-2 rounded-full mb-4 ${edu.color} bg-opacity-10 dark:bg-opacity-20`}>
-                      <span className="text-sm font-semibold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500">
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white">
                         {edu.year}
                       </span>
                     </div>

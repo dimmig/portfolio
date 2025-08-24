@@ -15,14 +15,14 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Senior Software Developer",
-    company: "Tech Company",
-    period: "2021 - Present",
-    description: "Leading development of enterprise applications and mentoring junior developers.",
+    title: "Middle Software Developer",
+    company: "Airtrail Company",
+    period: "2024 - Present",
+    description: "Development of enterprise aviation application.",
   },
   {
     title: "Full Stack Developer",
-    company: "Startup",
+    company: "Startups",
     period: "2019 - 2021",
     description: "Developed and maintained multiple web applications using modern technologies.",
   },
