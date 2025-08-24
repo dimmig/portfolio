@@ -113,8 +113,24 @@ export function Experience() {
               Career Journey
             </h3>
             <div className="relative" ref={containerRef}>
-              {/* Timeline Line Container */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full">
+              {/* Timeline Line Container - Hidden on mobile */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden md:block">
+                {/* Background Line */}
+                <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-full" />
+                
+                {/* Animated Line */}
+                <motion.div
+                  className="absolute top-0 left-0 w-full bg-gradient-to-b from-blue-500 via-purple-500 to-green-500 rounded-full"
+                  style={{
+                    height: "100%",
+                    scaleY: scaleX,
+                    transformOrigin: "top"
+                  }}
+                />
+              </div>
+              
+              {/* Mobile Timeline Line */}
+              <div className="absolute left-4 top-0 w-1 h-full md:hidden">
                 {/* Background Line */}
                 <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-full" />
                 
@@ -130,11 +146,35 @@ export function Experience() {
               </div>
               
               {/* Experience Items */}
-              <div className="space-y-24">
+              <div className="space-y-12 md:space-y-24">
                 {experiences.map((exp, index) => (
                   <div key={exp.year} className="relative">
-                    {/* Timeline Dot with Ripple Effect */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                    {/* Timeline Dot with Ripple Effect - Desktop */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center hidden md:flex">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={inView ? { scale: [0, 1.2, 1] } : {}}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        className={`w-6 h-6 rounded-full ${exp.color} shadow-lg z-20`}
+                      />
+                      <motion.div
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={inView ? { 
+                          scale: [0, 1.5],
+                          opacity: [0, 0.3, 0]
+                        } : {}}
+                        transition={{
+                          duration: 1.5,
+                          delay: index * 0.2,
+                          repeat: Infinity,
+                          repeatDelay: 2
+                        }}
+                        className={`absolute w-6 h-6 rounded-full ${exp.color} z-10`}
+                      />
+                    </div>
+
+                    {/* Timeline Dot with Ripple Effect - Mobile */}
+                    <div className="absolute left-4 transform -translate-x-1/2 flex items-center justify-center md:hidden">
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={inView ? { scale: [0, 1.2, 1] } : {}}
@@ -175,7 +215,7 @@ export function Experience() {
                         type: "spring",
                         stiffness: 100
                       }}
-                      className={`relative ${index % 2 === 0 ? 'ml-auto pl-8 pr-4' : 'mr-auto pr-8 pl-4'} w-[calc(50%-2rem)]`}
+                      className={`relative pl-12 md:pl-0 ${index % 2 === 0 ? 'md:ml-auto md:pl-8 md:pr-4' : 'md:mr-auto md:pr-8 md:pl-4'} md:w-[calc(50%-2rem)] w-full`}
                     >
                       <motion.div
                         whileHover={{ scale: 1.02 }}
@@ -202,7 +242,7 @@ export function Experience() {
                             {exp.title}
                           </h4>
                           <p className="text-gray-600 dark:text-gray-400 mb-1">{exp.role}</p>
-                          <p className="text-sm text-gray-500 dark:text-gray-500 flex items-center gap-1 mb-4">
+                          <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1 mb-4">
                             <span>📍</span> {exp.location}
                           </p>
                         </motion.div>
@@ -270,7 +310,7 @@ export function Experience() {
                   <div className={`absolute top-0 left-0 w-2 h-full ${edu.color} rounded-l-xl`} />
                   <div className="pl-4">
                     <div className={`inline-block px-4 py-2 rounded-full mb-4 ${edu.color} bg-opacity-10 dark:bg-opacity-20`}>
-                      <span className="text-sm font-semibold bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                      <span className="text-sm font-semibold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-red-500">
                         {edu.year}
                       </span>
                     </div>
@@ -278,7 +318,7 @@ export function Experience() {
                       {edu.title}
                     </h4>
                     <p className="text-gray-600 dark:text-gray-400 mb-1">{edu.institution}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-500 flex items-center gap-1 mb-4">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1 mb-4">
                       <span>📍</span> {edu.location}
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 mb-4">{edu.description}</p>

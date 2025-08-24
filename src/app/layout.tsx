@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Background3D } from "@/components/3d/Background3D";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dima Galagan - Software Developer",
   description: "Portfolio website showcasing my work as a software developer",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
@@ -25,7 +25,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Background3D />
           {children}
         </ThemeProvider>
       </body>
