@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 import { useEffect, useRef } from "react";
-import { Scene3D } from "../3d/Scene3D";
 
 export function Hero() {
   const { theme, setTheme } = useTheme();
@@ -78,7 +77,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white sm:text-gray-900 sm:dark:text-white mb-4 transform-gpu leading-tight">
-            Dima Galagan
+            Dmytro Halahan
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-100 sm:text-gray-600 sm:dark:text-gray-100 mb-6 sm:mb-8">
             Software Developer
