@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+
+User-agent: bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 0
+
+Sitemap: https://dimmig.me/sitemap.xml
